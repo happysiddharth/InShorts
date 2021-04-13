@@ -25,7 +25,7 @@
         android:layout_marginTop="@dimen/dp50"
         android:text="@string/choose_your_language"
         android:textColor="@color/black"
-        android:textSize="@dimen/sp25"
+        android:textSize="@dimen/sp22"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,16 +38,17 @@
         android:layout_marginTop="@dimen/dp15"
         android:text="@string/choose_hindi"
         android:textColor="@color/black"
-        android:textSize="@dimen/sp25"
+        android:textSize="@dimen/sp22"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="52dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -60,33 +61,65 @@
             android:orientation="horizontal">
 
             <RadioButton
+                android:id="@+id/btnSelectEnglish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp5"
                 android:background="@drawable/radio_button_selector"
-                android:paddingLeft="25dp"
-                android:paddingTop="10dp"
-                android:paddingRight="25dp"
-                android:paddingBottom="10dp"
-                android:textColor="@drawable/radio_text_selector"
                 android:button="@android:color/transparent"
+                android:paddingLeft="@dimen/dp25"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp25"
+                android:paddingBottom="@dimen/dp10"
                 android:text="@string/english"
-                android:layout_margin="5dp"
+                android:textColor="@drawable/radio_text_selector"
                 android:textSize="@dimen/sp25" />
 
             <RadioButton
+                android:id="@+id/btnSelectHindi"
                 android:layout_width="wrap_content"
-                android:text="@string/hindi"
-                android:paddingRight="55dp"
-                android:textSize="@dimen/sp25"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textColor="@drawable/radio_text_selector"
-                android:layout_margin="5dp"
-                android:button="@android:color/transparent"
-                android:background="@drawable/radio_button_selector"
                 android:layout_height="wrap_content"
-                android:paddingLeft="55dp"/>
+                android:layout_marginLeft="@dimen/dp5"
+                android:background="@drawable/radio_button_selector"
+                android:button="@android:color/transparent"
+                android:paddingLeft="@dimen/dp50"
+                android:paddingTop="@dimen/dp10"
+                android:paddingRight="@dimen/dp50"
+                android:paddingBottom="@dimen/dp10"
+                android:text="@string/hindi"
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="@dimen/sp25" />
         </RadioGroup>
     </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/swipeUpLanguage"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.831"
+        app:lottie_fileName="arrow_swipe_up.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/swipeUpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/swipeUpLanguage"
+        app:layout_constraintVertical_bias="0.515" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
