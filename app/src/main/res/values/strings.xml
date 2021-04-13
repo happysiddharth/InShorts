@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">InShorts</string>
+    <string name="choose_your_language">Choose your language</string>
+    <string name="choose_hindi">भाषा का चयन करें</string>
+    <string name="english">English</string>
+    <string name="hindi">हिंदी</string>
 </resources>
