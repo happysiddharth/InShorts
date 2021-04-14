@@ -1,5 +1,6 @@
 package com.example.inshorts.views
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
@@ -15,12 +16,17 @@ class SelectLanguage : AppCompatActivity() {
             swipeUpText.text="Swipe Up"
             swipeUpLanguage.setAnimation("arrow_swipe_up.json")
             swipeUpLanguage.playAnimation()
+
+            val intent = Intent(this, NewsFeedActivity::class.java)
+            startActivity(intent)
         }
         
         btnSelectHindi.setOnClickListener {
             swipeUpText.text="ऊपर स्वाइप करें"
             swipeUpLanguage.setAnimation("arrow_swipe_up.json")
             swipeUpLanguage.playAnimation()
+            val intent = Intent(this, NewsFeedActivity::class.java)
+            startActivity(intent)
         }
     }
 }
