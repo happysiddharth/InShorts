@@ -16,14 +16,11 @@ class CategoryPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         val exampleList = generateDummyList(500)
         TopPicksRecyclerView.adapter = PicksAdapter(exampleList)
         TopPicksRecyclerView.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         TopPicksRecyclerView.setHasFixedSize(true)
     }
-
-
 
     private fun generateDummyList(size: Int): List<DataClass> {
         val list = ArrayList<DataClass>()

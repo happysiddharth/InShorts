@@ -14,7 +14,6 @@ class PicksAdapter(private  val TopPicsList: List<DataClass>) : RecyclerView.Ada
     class PicksViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val IVimageView : ImageView = itemView.ivTopPicks
         val TvtextView : TextView = itemView.tvtitle
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PicksViewHolder {
@@ -28,10 +27,7 @@ class PicksAdapter(private  val TopPicsList: List<DataClass>) : RecyclerView.Ada
         val currentItem = TopPicsList[position]
         holder.IVimageView.setImageResource(currentItem.image)
         holder.TvtextView.text = currentItem.title
-
     }
 
     override fun getItemCount() = TopPicsList.size
-
-
 }
