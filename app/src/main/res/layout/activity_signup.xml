@@ -3,13 +3,75 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Signup">
-   <ImageView
-       android:layout_width="wrap_content"
 
-       android:layout_height="wrap_content"/>
+    <ImageView
+
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="70dp"
+        android:src="@drawable/logo" />
+
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="#3F51B5"
+        android:drawableStart="@drawable/fb_logo"
+        android:paddingStart="20dp"
+        android:text="Sign in with Facebook"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="#F9FAFB"
+        android:drawableStart="@drawable/google_logo"
+        android:paddingStart="20dp"
+        android:text="Sign in with Google"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="#00BCD4"
+        android:drawableStart="@drawable/twitter_logo"
+        android:paddingStart="20dp"
+        android:text="Sign in with  Twitter"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
+
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:background="#0793D2"
+        android:drawableStart="@drawable/ic__01_phone_call"
+        android:paddingStart="20dp"
+        android:text="Sign in with Phone"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        tools:ignore="RtlCompat" />
 
 
 </LinearLayout>

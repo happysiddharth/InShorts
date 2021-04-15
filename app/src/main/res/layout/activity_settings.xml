@@ -102,6 +102,7 @@
                         android:background="@drawable/rect_white"
                         android:fontFamily="monospace"
                         android:text="Sign In"
+                        android:id="@+id/btnSignIn"
                         android:textAllCaps="false"
                         android:textColor="#03A9F4"
                         android:textStyle="bold" />
