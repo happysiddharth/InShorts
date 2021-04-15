@@ -1,6 +1,5 @@
 package com.example.inshorts.views
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.inshorts.R
@@ -33,8 +32,9 @@ class NewsFeedActivity : AppCompatActivity() {
     }
 
     private fun callNewsMainFeedApi() {
+        val all = "all"
         val newsFeedApiClient = Network.getInstance().create(NewsMainFeedAllApiClient::class.java)
-        val call = newsFeedApiClient.getNewsAllMainData()
+        val call = newsFeedApiClient.getNewsAllMainData(all)
         call.enqueue(object : Callback<ResponseModel>{
             override fun onResponse(call: Call<ResponseModel>, response: Response<ResponseModel>) {
                 response.body()?.let {
@@ -49,19 +49,11 @@ class NewsFeedActivity : AppCompatActivity() {
                     for (i in 0 until imageUrl.size){
                         sliderItemContent.add(SliderItemContent(imageUrl[i]))
                     }
-
-
                     verticalViewPager.adapter = ViewPagerAdapter(this@NewsFeedActivity,sliderItemContent, title, content, imageUrl, readMoreUrl, url, date, time, verticalViewPager)
-                    
-
-
                 }
             }
-
             override fun onFailure(call: Call<ResponseModel>, t: Throwable) {
-
             }
-
         })
     }
 
