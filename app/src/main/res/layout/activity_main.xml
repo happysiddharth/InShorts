@@ -1,18 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvSkip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="right"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Skip"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvChoose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="100dp"
+        android:text="Choose relevance color to "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/tvPersonalise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="personalise your feed "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal" />
+
+    <com.ryan.rv_gallery.GalleryRecyclerView
+        android:id="@+id/TopPicksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:clipToPadding="false"
+        app:helper="LinearSnapHelper"
+        tools:listitem="@layout/item_layout">
+
+    </com.ryan.rv_gallery.GalleryRecyclerView>
+
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/llcoin"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:gravity="center_horizontal"-->
+    <!--        android:layout_below="@id/tvBookmarks"-->
+    <!--        android:layout_marginTop="25dp"-->
+    <!--        android:orientation="horizontal">-->
+
+
+    <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--            android:layout_width="35dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:layout_marginTop="21dp"-->
+    <!--            android:src="@drawable/ic__02_facebook_1"-->
+    <!--            app:civ_border_color="@color/white"-->
+    <!--            app:civ_border_width="2dp" />-->
+
+    <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--            android:layout_width="35dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_marginTop="21dp"-->
+    <!--            android:layout_marginHorizontal="50dp"-->
+    <!--            android:src="@drawable/ic__03_google"-->
+    <!--            app:civ_border_color="@color/white"-->
+    <!--            app:civ_border_width="2dp" />-->
+
+    <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--            android:layout_width="35dp"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:layout_marginTop="21dp"-->
+    <!--            android:src="@drawable/ic__04_twitter"-->
+    <!--            app:civ_border_color="@color/white"-->
+    <!--            app:civ_border_width="2dp" />-->
+
+
+    <!--    </LinearLayout>-->
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            style="@style/RadioButtonStyle"
+            android:layout_marginHorizontal="50dp"
+            android:button="@drawable/customise_radio_button"
+
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:button="@drawable/customise_radio_button" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            style="@style/RadioButtonStyle"
+            android:layout_margin="20dp"
+            android:button="@drawable/customise_radio_button" />
+
+
+    </RadioGroup>
+
+
+</LinearLayout>
