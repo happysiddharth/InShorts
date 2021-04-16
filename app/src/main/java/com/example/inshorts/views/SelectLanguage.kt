@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
+import com.example.inshorts.CategoryPage
 import com.example.inshorts.R
 import kotlinx.android.synthetic.main.activity_select_language.*
 
@@ -17,8 +18,11 @@ class SelectLanguage : AppCompatActivity() {
             swipeUpLanguage.setAnimation("arrow_swipe_up.json")
             swipeUpLanguage.playAnimation()
 
-            val intent = Intent(this, NewsFeedActivity::class.java)
-            startActivity(intent)
+//            val intent = Intent(this, NewsFeedActivity::class.java)
+//            startActivity(intent)
+
+            val categoryStart = Intent(this, CategoryPage::class.java)
+            startActivity(categoryStart)
         }
         
         btnSelectHindi.setOnClickListener {
@@ -28,5 +32,7 @@ class SelectLanguage : AppCompatActivity() {
             val intent = Intent(this, NewsFeedActivity::class.java)
             startActivity(intent)
         }
+
+
     }
 }

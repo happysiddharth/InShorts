@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.inshorts.R
+import com.example.inshorts.Settings
 import com.example.inshorts.fragments.*
 import com.r0adkll.slidr.model.SlidrInterface
 import kotlinx.android.synthetic.main.activity_categories.*
@@ -34,6 +35,10 @@ class CategoriesActivity : AppCompatActivity(), View.OnClickListener {
             openSearchActivity()
         }
 
+        settingsBtn.setOnClickListener {
+            openSettings()
+        }
+
         rlSearchBar.visibility = View.VISIBLE
         scrollView.visibility = View.VISIBLE
         cvPolitics.setOnClickListener(this)
@@ -52,6 +57,11 @@ class CategoriesActivity : AppCompatActivity(), View.OnClickListener {
         cvScience.setOnClickListener(this)
         cvInternational.setOnClickListener(this)
         cvMiscellanous.setOnClickListener(this)
+    }
+
+    private fun openSettings() {
+        val settingIntent = Intent(this, Settings::class.java)
+        startActivity(settingIntent)
     }
 
     private fun openSearchActivity() {
@@ -289,4 +299,6 @@ class CategoriesActivity : AppCompatActivity(), View.OnClickListener {
         rlSearchBar.visibility = View.VISIBLE
         scrollView.visibility = View.VISIBLE
     }
+
+
 }

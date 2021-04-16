@@ -40,6 +40,12 @@
     <string name="fashion">Fashion</string>
     <string name="education">Education</string>
     <string name="health_amp_fitness"><![CDATA[Health & Fitness]]></string>
+    <string name="skip">Skip</string>
+    <string name="no_news">NO News</string>
+    <string name="major_news">Major News</string>
+    <string name="all_new">All News</string>
+    <string name="personalise_your_feed">personalise your feed!</string>
+    <string name="choose_relevance_color_to">Choose relevance color to</string>
 
 
     <style name="RadioButtonStyle" parent="Theme.AppCompat.Light.NoActionBar">
