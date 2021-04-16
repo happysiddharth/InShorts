@@ -14,20 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:padding="20dp">
+        android:padding="@dimen/dp20">
 
         <ImageButton
             android:id="@+id/settingsBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_settings_icon" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp150"
+            android:layout_marginStart="@dimen/dp120"
             android:text="@string/discover"
             android:textColor="@color/black"
             android:textSize="@dimen/sp16"
@@ -37,17 +36,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toStartOf="@id/nextBtn"
-            android:text="My Feed"
+            android:text="@string/my_feed"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="@dimen/sp16"
             android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/nextBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="5dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_next_page" />
 
@@ -57,16 +56,16 @@
         android:id="@+id/rlSearchBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
-        android:background="#E8EBED"
-        android:padding="8dp">
+        android:layout_marginStart="@dimen/dp12"
+        android:layout_marginEnd="@dimen/dp12"
+        android:background="@color/background_for_search"
+        android:padding="@dimen/dp8">
 
         <ImageButton
             android:id="@+id/searchIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
+            android:layout_marginStart="@dimen/dp100"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_search_icon" />
 
@@ -74,9 +73,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp10"
-            android:gravity="center"
             android:layout_toEndOf="@id/searchIcon"
-            android:text="Search for news"
+            android:gravity="center"
+            android:text="@string/search_for_news"
             android:textColor="@android:color/darker_gray"
             android:textStyle="bold" />
 
@@ -89,17 +88,17 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="@dimen/dp200"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="20dp"
-                android:padding="10dp"
-                android:text="CATEGORIES"
-                android:textSize="18sp"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp20"
+                android:padding="@dimen/dp10"
+                android:text="@string/categories"
+                android:textSize="@dimen/sp18"
                 android:textStyle="bold" />
 
             <HorizontalScrollView
@@ -109,143 +108,143 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="10dp"
                     android:layout_marginStart="@dimen/dp25"
+                    android:layout_marginTop="@dimen/dp20"
                     android:layout_marginEnd="@dimen/dp25"
+                    android:layout_marginBottom="@dimen/dp10"
                     android:orientation="horizontal">
 
                     <LinearLayout
                         android:id="@+id/llMyFeed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="12dp"
+                        android:layout_marginEnd="@dimen/dp12"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="50dp"
-                            android:layout_marginBottom="12dp"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp50"
                             android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/dp12"
                             android:src="@drawable/my_feed" />
 
                         <TextView
                             android:id="@+id/tvMyFeed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="MY FEED"
-                            android:textSize="13sp" />
+                            android:text="@string/my_feed_capital"
+                            android:textSize="@dimen/sp13" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/llAllNews"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="@dimen/dp12"
+                        android:layout_marginEnd="@dimen/dp12"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="50dp"
-                            android:layout_marginBottom="12dp"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp50"
                             android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/dp12"
                             android:src="@drawable/all_news" />
 
                         <TextView
                             android:id="@+id/tvAllNews"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="ALL NEWS"
-                            android:textSize="13sp" />
+                            android:text="@string/all_news"
+                            android:textSize="@dimen/sp13" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/llTopStories"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="@dimen/dp12"
+                        android:layout_marginEnd="@dimen/dp12"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="50dp"
-                            android:layout_marginBottom="12dp"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp50"
                             android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/dp12"
                             android:src="@drawable/top_stories" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TOP STORIES"
-                            android:textSize="13sp" />
+                            android:text="@string/top_stories"
+                            android:textSize="@dimen/sp13" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/llTrending"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="@dimen/dp12"
+                        android:layout_marginEnd="@dimen/dp12"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="50dp"
-                            android:layout_marginBottom="12dp"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp50"
                             android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/dp12"
                             android:src="@drawable/trending" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TRENDING"
-                            android:textSize="13sp" />
+                            android:text="@string/trending"
+                            android:textSize="@dimen/sp13" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/llBookMarks"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginEnd="12dp"
+                        android:layout_marginStart="@dimen/dp12"
+                        android:layout_marginEnd="@dimen/dp12"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="50dp"
-                            android:layout_marginBottom="12dp"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp50"
                             android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/dp12"
                             android:src="@drawable/bookmark" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="BOOKMARKS"
-                            android:textSize="13sp" />
+                            android:text="@string/bookmarks"
+                            android:textSize="@dimen/sp13" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/llUnread"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginStart="@dimen/dp12"
                         android:layout_marginEnd="@dimen/dp25"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="60dp"
-                            android:layout_height="50dp"
-                            android:layout_marginBottom="12dp"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp50"
                             android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/dp12"
                             android:src="@drawable/unread" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="UNREAD"
-                            android:textSize="13sp" />
+                            android:text="@string/unread"
+                            android:textSize="@dimen/sp13" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -254,17 +253,17 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="20dp"
-                android:padding="10dp"
-                android:text="SUGGESTED TOPICS"
-                android:textSize="18sp"
+                android:layout_marginStart="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp20"
+                android:padding="@dimen/dp10"
+                android:text="@string/suggested_topics"
+                android:textSize="@dimen/sp18"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_height="@dimen/dp150"
+                android:layout_margin="@dimen/dp10"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -273,20 +272,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
                     app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/corona_virus" />
@@ -295,12 +294,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Coronavirus"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/coronavirus"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -310,20 +309,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:elevation="@dimen/dp10"
                     app:cardCornerRadius="@dimen/dp10"
-                    android:elevation="10dp"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/india" />
@@ -332,35 +331,35 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
                             android:paddingBottom="8dp"
-                            android:text="India"
+                            android:text="@string/india"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvBusiness"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/buisness" />
@@ -369,12 +368,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Business"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/business"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -383,30 +382,30 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_height="@dimen/dp150"
+                android:layout_margin="@dimen/dp10"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvPolitics"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/politician" />
@@ -415,36 +414,36 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Politics"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/politics"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvSports"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@drawable/card_margin"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/sports" />
@@ -453,12 +452,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Sports"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/sports"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -468,20 +467,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:elevation="@dimen/dp10"
                     app:cardCornerRadius="@dimen/dp10"
-                    android:elevation="10dp"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/technology" />
@@ -490,12 +489,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Technology"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/technology"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -504,30 +503,30 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_height="@dimen/dp150"
+                android:layout_margin="@dimen/dp10"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cvStartUps"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp80"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/startups" />
@@ -536,12 +535,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Startups"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/startups"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -550,21 +549,21 @@
                     android:id="@+id/cvEntertainment"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/camera" />
@@ -573,12 +572,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Entertainment"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/entertainment"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -588,20 +587,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:elevation="@dimen/dp10"
                     app:cardCornerRadius="@dimen/dp10"
-                    android:elevation="10dp"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/hatke" />
@@ -610,12 +609,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Hatke"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/hatke"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -625,8 +624,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_height="@dimen/dp150"
+                android:layout_margin="@dimen/dp10"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -635,20 +634,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:elevation="@dimen/dp10"
                     app:cardCornerRadius="@dimen/dp10"
-                    android:elevation="10dp"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/international" />
@@ -657,12 +656,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="International"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/international"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -671,21 +670,21 @@
                     android:id="@+id/cvAutomobile"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/automoblie" />
@@ -694,12 +693,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Automobile"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/automobile"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -708,21 +707,21 @@
                     android:id="@+id/cvScience"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/science" />
@@ -731,12 +730,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Science"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/science"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -745,8 +744,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_height="@dimen/dp150"
+                android:layout_margin="@dimen/dp10"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -754,21 +753,21 @@
                     android:id="@+id/cvTravel"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/travel" />
@@ -777,12 +776,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Travel"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/travel"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -792,20 +791,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:elevation="@dimen/dp10"
                     app:cardCornerRadius="@dimen/dp10"
-                    android:elevation="10dp"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/tv" />
@@ -814,12 +813,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Miscellaneous"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/miscellaneous"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -828,21 +827,21 @@
                     android:id="@+id/cvFashion"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/fashion" />
@@ -851,12 +850,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
                             android:paddingBottom="8dp"
-                            android:text="Fashion"
+                            android:text="@string/fashion"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -865,8 +864,8 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
+                android:layout_height="@dimen/dp150"
+                android:layout_margin="@dimen/dp10"
                 android:orientation="horizontal"
                 android:weightSum="3">
 
@@ -875,20 +874,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:elevation="@dimen/dp10"
                     app:cardCornerRadius="@dimen/dp10"
-                    android:elevation="10dp"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp80"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/education" />
@@ -897,12 +896,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Education"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp12"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/education"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -911,21 +910,21 @@
                     android:id="@+id/cvHealthFitness"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:background="@drawable/card_margin"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop"
                             android:src="@drawable/medical" />
@@ -934,12 +933,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="12dp"
-                            android:paddingBottom="8dp"
-                            android:text="Health &amp; Fitness"
+                            android:layout_marginStart="@dimen/dp10"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:paddingBottom="@dimen/dp8"
+                            android:text="@string/health_amp_fitness"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
                     </FrameLayout>
                 </androidx.cardview.widget.CardView>
@@ -947,20 +946,20 @@
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="@dimen/dp10"
                     android:layout_weight="1"
-                    android:elevation="10dp"
+                    android:elevation="@dimen/dp10"
+                    app:cardCornerRadius="@dimen/dp10"
                     app:cardUseCompatPadding="true">
 
                     <FrameLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_margin="5dp"
+                        android:layout_margin="@dimen/dp5"
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="90dp"
-                            android:layout_height="80dp"
+                            android:layout_width="@dimen/dp90"
+                            android:layout_height="@dimen/dp80"
                             android:layout_gravity="center"
                             android:scaleType="centerCrop" />
 
@@ -968,9 +967,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="bottom"
-                            android:layout_marginTop="12dp"
+                            android:layout_marginTop="@dimen/dp12"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="@dimen/sp14"
                             android:textStyle="bold" />
 
                     </FrameLayout>

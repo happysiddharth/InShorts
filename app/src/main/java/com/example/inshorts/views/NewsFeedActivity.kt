@@ -2,12 +2,14 @@ package com.example.inshorts.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.example.inshorts.R
 import com.example.inshorts.clients.NewsMainFeedAllApiClient
 import com.example.inshorts.models.ResponseModel
 import com.example.inshorts.network.Network
 import com.example.inshorts.viewpagers.ViewPagerAdapter
 import kotlinx.android.synthetic.main.activity_news_feed.*
+import kotlinx.android.synthetic.main.fragment_science.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,6 +29,7 @@ class NewsFeedActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news_feed)
 
+        flNewsFeed.visibility = View.VISIBLE
         callNewsMainFeedApi()
 
     }
@@ -49,6 +52,7 @@ class NewsFeedActivity : AppCompatActivity() {
                     for (i in 0 until imageUrl.size){
                         sliderItemContent.add(SliderItemContent(imageUrl[i]))
                     }
+                    flNewsFeed.visibility = View.GONE
                     verticalViewPager.adapter = ViewPagerAdapter(this@NewsFeedActivity,sliderItemContent, title, content, imageUrl, readMoreUrl, url, date, time, verticalViewPager)
                 }
             }
@@ -57,8 +61,4 @@ class NewsFeedActivity : AppCompatActivity() {
         })
     }
 
-//    private fun openCategoryActivity() {
-//        val openCategoryIntent = Intent(this, CategoryActivity::class.java)
-//        startActivity(openCategoryIntent)
-//    }
 }

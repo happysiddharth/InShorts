@@ -14,6 +14,7 @@ import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.bumptech.glide.Glide
 import com.example.inshorts.R
+import com.example.inshorts.views.CategoriesActivity
 import com.example.inshorts.views.NewsUrlDetailsActivity
 import com.example.inshorts.views.SliderItemContent
 import com.mohitdev.verticalviewpager.VerticalViewPager
@@ -125,10 +126,10 @@ class ViewPagerAdapter(
                                 context.startActivity(urlIntent)
                             }
                         }
-//                        else  if(deltaY > 300){
-//                            val categoryIntent = Intent(context, CategoryActivity::class.java)
-//                            context.startActivity(categoryIntent)
-//                        }
+                        else  if(deltaY > 300){
+                            val categoryIntent = Intent(context, CategoriesActivity::class.java)
+                            context.startActivity(categoryIntent)
+                        }
                         //                        for category it is important DO NOT DELETE
                     }
                 }

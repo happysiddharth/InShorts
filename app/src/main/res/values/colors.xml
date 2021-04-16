@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="theme_blue">#369AF8</color>
+    <color name="gray_shade">#7C7C7C</color>
+    <color name="gray_background">#716F6F</color>
+    <color name="background_for_search">#E8EBED</color>
 </resources>

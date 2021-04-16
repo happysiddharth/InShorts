@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -10,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="@dimen/dp10">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -25,7 +26,7 @@
                 <ImageView
                     android:id="@+id/ivNewsImg"
                     android:layout_width="match_parent"
-                    android:layout_height="260dp"
+                    android:layout_height="@dimen/dp260"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_launcher_background" />
 
@@ -33,45 +34,46 @@
                     android:id="@+id/tvNewsHeadlines"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:lineSpacingExtra="5dp"
-                    android:padding="2dp"
-                    android:text="News Headlines"
+                    android:layout_margin="@dimen/dp16"
+                    android:lineSpacingExtra="@dimen/dp5"
+                    android:padding="@dimen/dp2"
+                    android:text="@string/news_headlines"
                     android:textColor="@color/black"
-                    android:textSize="16sp" />
+                    android:textSize="@dimen/sp16" />
 
                 <TextView
                     android:id="@+id/tvNewsDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:lineSpacingExtra="5dp"
-                    android:padding="2dp"
-                    android:text="News Description"
-                    android:textColor="#7C7C7C"
-                    android:textSize="14sp" />
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:lineSpacingExtra="@dimen/dp5"
+                    android:padding="@dimen/dp2"
+                    android:text="@string/news_description"
+                    android:textColor="@color/gray_shade"
+                    android:textSize="@dimen/sp14" />
 
                 <TextView
                     android:id="@+id/tvSwipeText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:padding="2dp"
-                    android:text="Swipe left to read more"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:padding="@dimen/dp2"
+                    android:text="@string/swipe_left_to_read_more"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="10sp" />
+                    android:textSize="@dimen/sp11"
+                    tools:ignore="SmallSp" />
 
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/ivUrl"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="@dimen/dp70"
                 android:layout_below="@id/llNewsInfo"
                 android:layout_gravity="bottom"
-                android:background="#716F6F"
+                android:background="@color/gray_background"
                 android:scaleType="centerCrop" />
 
             <TextView
@@ -80,14 +82,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/llNewsInfo"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="35dp"
-                android:padding="2dp"
-                android:text="Heading"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp35"
+                android:padding="@dimen/dp2"
+                android:text="@string/heading"
                 android:textColor="@color/white"
-                android:textSize="13sp" />
+                android:textSize="@dimen/sp14" />
 
             <TextView
                 android:id="@+id/tvReadMore"
@@ -95,14 +97,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/llNewsInfo"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginBottom="20dp"
-                android:padding="2dp"
-                android:text="Tap to read more"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_marginBottom="@dimen/dp20"
+                android:padding="@dimen/dp2"
+                android:text="@string/tap_to_read_more"
                 android:textColor="@color/white"
-                android:textSize="11sp" />
+                android:textSize="@dimen/sp11" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </ScrollView>
