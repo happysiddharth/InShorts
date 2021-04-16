@@ -21,5 +21,18 @@ class Settings : AppCompatActivity() {
             startActivity(intent)
 
         }
+        btnShareApp.setOnClickListener {
+            val myIntent = Intent(Intent.ACTION_SEND)
+            myIntent.setType("text/plain")
+            val sharesub = "Check out inshorts app. I found it best for reading news.\n" +
+                    "http://inshorts.com/mobile"
+            val shareBody = "Check out inshorts app. I found it best for reading news.\n" +
+                    "http://inshorts.com/mobile"
+            myIntent.putExtra(Intent.EXTRA_SUBJECT, sharesub)
+            myIntent.putExtra(Intent.EXTRA_TEXT, shareBody)
+            startActivity(Intent.createChooser(myIntent, "Share Using"))
+
+
+        }
     }
 }
