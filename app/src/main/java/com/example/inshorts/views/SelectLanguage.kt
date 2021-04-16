@@ -23,17 +23,12 @@ class SelectLanguage : AppCompatActivity() {
             swipeUpText.text = "Swipe Up"
             swipeUpLanguage.setAnimation("arrow_swipe_up.json")
             swipeUpLanguage.playAnimation()
-
-//            val categoryStart = Intent(this, CategoryPage::class.java)
-//            startActivity(categoryStart)
         }
 
         btnSelectHindi.setOnClickListener {
             swipeUpText.text = "ऊपर स्वाइप करें"
             swipeUpLanguage.setAnimation("arrow_swipe_up.json")
             swipeUpLanguage.playAnimation()
-            val intent = Intent(this, NewsFeedActivity::class.java)
-            startActivity(intent)
         }
 
     }
