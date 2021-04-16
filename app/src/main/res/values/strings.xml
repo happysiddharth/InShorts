@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">InShorts</string>
     <string name="choose_your_language">Choose your language</string>
     <string name="choose_hindi">भाषा का चयन करें</string>
@@ -40,4 +40,24 @@
     <string name="fashion">Fashion</string>
     <string name="education">Education</string>
     <string name="health_amp_fitness"><![CDATA[Health & Fitness]]></string>
+
+
+    <style name="RadioButtonStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">#DE1919</item>
+        <item name="android:textColorPrimary">#FFEB3B</item>
+
+
+    </style>
+
+    <style name="Profile">
+        <!--        <item name="android:background">@drawable/whiterectangle</item>-->
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:textColor">#B2000000</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAlignment" tools:targetApi="jelly_bean_mr1">viewStart</item>
+        <item name="android:layout_marginStart" tools:targetApi="jelly_bean_mr1">15dp</item>
+        <item name="android:layout_marginEnd" tools:targetApi="jelly_bean_mr1">15dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:fontFamily">@font/fira_sans</item>
+    </style>
 </resources>
