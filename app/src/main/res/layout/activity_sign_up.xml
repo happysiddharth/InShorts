@@ -4,10 +4,15 @@
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="@dimen/dp20"
+    android:padding="@dimen/dp10"
     android:gravity="center"
+
     android:layout_height="match_parent"
     tools:context=".views.SignUpActivity">
+    <ImageView
+        android:layout_width="@dimen/dp100"
+        android:layout_height="@dimen/dp100"
+        android:src="@drawable/logo"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

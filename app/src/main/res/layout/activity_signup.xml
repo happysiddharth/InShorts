@@ -33,14 +33,15 @@
         tools:ignore="RtlCompat" />
 
     <Button
+        android:id="@+id/btnSignUpWithEmail"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
         android:background="#F9FAFB"
-        android:drawableStart="@drawable/google_logo"
+        android:drawableStart="@drawable/ic_baseline_email_24"
         android:paddingStart="20dp"
-        android:text="Sign in with Google"
+        android:text="Sign in with Email"
         android:textAllCaps="false"
         android:textStyle="bold"
         tools:ignore="RtlCompat" />

@@ -8,8 +8,8 @@ import retrofit2.http.*
 
 interface NewsMainFeedAllApiClient {
 
-    @GET("/news")
-    fun getNewsAllMainData(@Query("category") category: String): Call<ResponseModel>
+    @GET("api/news/{category}")
+    fun getNewsAllMainData(@Path("category")  category: String): Call<ResponseModel>
 
     @POST("/signup")
     fun signup(@Body sigupRequest: SigupRequest):Call<TokenResponse>

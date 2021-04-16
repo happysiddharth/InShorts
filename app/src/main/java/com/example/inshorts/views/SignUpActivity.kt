@@ -4,11 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.example.inshorts.R
 import com.example.inshorts.clients.NewsMainFeedAllApiClient
 import com.example.inshorts.models.SigupRequest
 import com.example.inshorts.models.TokenResponse
 import com.example.inshorts.network.Network
+import com.example.inshorts.util.SharedPreferencesHelder
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -30,6 +32,10 @@ class SignUpActivity : AppCompatActivity() {
                         ) {
                             if(response.body()!=null){
                                 Log.d("Sidd",response.body().toString())
+                                SharedPreferencesHelder.writeStringToPreference(applicationContext,"token",response.body()!!.token)
+                                SharedPreferencesHelder.writeStringToPreference(applicationContext,"user",etUserName.text.toString())
+                                Toast.makeText(applicationContext,"Signed up successfully",Toast.LENGTH_SHORT).show()
+                                finish()
                             }
                         }
 

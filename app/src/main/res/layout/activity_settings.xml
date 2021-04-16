@@ -48,6 +48,36 @@
             app:cardCornerRadius="10dp">
 
             <RelativeLayout
+                android:id="@+id/rlAfterSignIn"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#03A9F4"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/dp20"
+                    android:id="@+id/tvSignedInUser"/>
+                <Button
+                    android:layout_below="@+id/tvSignedInUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rect_white"
+                    android:fontFamily="monospace"
+                    android:text="Sign Out"
+                    android:id="@+id/btnSignout"
+                    android:textAllCaps="false"
+                    android:textColor="#03A9F4"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlBeforesignIn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#03A9F4"

@@ -14,7 +14,7 @@ class Network {
 
         fun getInstance(): Retrofit {
             return Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("https://inshortsapi.vercel.app/")
+                .baseUrl("http://10.0.2.2:8080/")
                 .client(OkHttpClient.Builder().addInterceptor(httpLoggingInterceptor).build())
                 .build()
         }
