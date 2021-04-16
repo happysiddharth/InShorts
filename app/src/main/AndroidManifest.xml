@@ -11,10 +11,10 @@
         android:roundIcon="@mipmap/inshorts_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.InShorts">
-        <activity android:name=".Signup"/>
-        <activity android:name=".Settings"/>
-
-        <activity android:name=".views.CategoriesActivity"/>
+        <activity android:name=".views.SignUpActivity"></activity>
+        <activity android:name=".Signup" />
+        <activity android:name=".Settings" />
+        <activity android:name=".views.CategoriesActivity" />
         <activity android:name=".views.NewsUrlDetailsActivity" />
         <activity android:name=".views.NewsFeedActivity" />
         <activity
@@ -26,12 +26,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CategoryPage"/>
-
+        <activity android:name=".CategoryPage" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
         <activity android:name=".views.SelectLanguage" />
     </application>
 
