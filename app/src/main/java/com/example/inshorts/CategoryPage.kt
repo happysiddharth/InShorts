@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.inshorts.util.SharedPreferencesHelder
 import com.example.inshorts.views.NewsFeedActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.collections.ArrayList
@@ -21,6 +22,7 @@ class CategoryPage : AppCompatActivity() {
         TopPicksRecyclerView.setHasFixedSize(true)
 
         tvSkip.setOnClickListener {
+            SharedPreferencesHelder.writeIntToPreference(applicationContext,"isopen",1)
             val intent = Intent(this, NewsFeedActivity::class.java)
             startActivity(intent)
         }

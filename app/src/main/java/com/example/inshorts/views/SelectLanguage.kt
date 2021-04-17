@@ -6,6 +6,7 @@ import android.view.MotionEvent
 import androidx.appcompat.app.AppCompatActivity
 import com.example.inshorts.CategoryPage
 import com.example.inshorts.R
+import com.example.inshorts.util.SharedPreferencesHelder
 import kotlinx.android.synthetic.main.activity_select_language.*
 
 class SelectLanguage : AppCompatActivity() {
@@ -15,6 +16,13 @@ class SelectLanguage : AppCompatActivity() {
     private var x2: Float? = null
     private var y2: Float? = null
 
+    override fun onStart() {
+        super.onStart()
+        if(SharedPreferencesHelder.getIntFromPreference(applicationContext,"isopen")==1){
+            startActivity(Intent(this,NewsFeedActivity::class.java))
+            finish()
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_language)
