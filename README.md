@@ -8,12 +8,22 @@
   <li>Database</li>
   <li>REST API</li>
   <li>My SQL</li>
+  <li>Spring-boot</li>	
   <li>Vertical ViewPager Library</li>
 </ul>  
+<hr>
+<h3>Backend</h3>
+<p>For our project we have develop our own REST API, hre is the link of the repo of backend database.</p>
+<p>https://github.com/happysiddharth/inshorts-backend</p>
 <hr>
 <h3>Features</h3>
 <p>This app displays the information of the latest news updates with detailed list of categories. The app shows latest news categories includes Business, Politics,  Entertainment, Technology, Sports and much more. There are different categories to choose, read and stay well informed with all the latest news updates.
 The brief summary for every news stories are available in the app.</p>
+<hr>
+<h3>Screenshort and description</h3>
+<img src="https://miro.medium.com/max/700/1*jlhVFGJBzq7HIHqRhJOXEQ.jpeg" width="500" height="333">
+<img src="https://miro.medium.com/max/700/1*NMD1jMjrC4CygqQxzrbtFQ.jpeg" width="500" height="333">
+<p>Here we can read the latest news on the feed with a title and short description, if readers want proper and brief information they can get that information just on the left swipe. On the right swipe, there is an option of categories selection where the user can select and read the news by sorting them by categories.</p>
 <hr>
 <h3>Dependencies</h3>
 <hr>
